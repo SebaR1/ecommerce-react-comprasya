@@ -1,12 +1,18 @@
 import React from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer'
+import Home from './pages/Home'
+
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
   return (
-    <h1>Hola mundo!
-    </h1>
+    <>
+      <NavBar/>
+      <Home/>
+    </>
   )
 }
 

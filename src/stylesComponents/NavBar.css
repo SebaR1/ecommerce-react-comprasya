@@ -1,0 +1,25 @@
+.bg-color-navbar {
+    background-image: linear-gradient(to top, #E6DBD0, #7D6167) !important;
+    border-bottom: 1px solid #7D6167 !important;
+}
+
+.bg-color-form-navbar {
+    background-color: #c2b1b444 !important;   
+    border-color: #7D6167 !important;
+}
+
+.button-navbar {
+    color: #270e07 !important;
+}
+
+.button-navbar:hover {
+    box-shadow: 0 0 5px 2px #7D6167 !important;
+}
+
+.form-focus-navbar:focus {
+    box-shadow: 0 0 5px 2px #7D6167 !important;
+}
+
+.form-focus-navbar:hover {
+    box-shadow: 0 0 5px 2px #7D6167 !important;
+}

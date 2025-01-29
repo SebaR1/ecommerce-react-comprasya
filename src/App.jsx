@@ -13,6 +13,7 @@ function App() {
     <>
       <NavBar/>
       <Home/>
+      <ItemListContainer greetings="Hola, soy un contenedor de una lista de items"/>
       <Footer/>
     </>
   )

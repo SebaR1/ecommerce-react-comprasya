@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import { Navbar as CustomNavbar } from "react-bootstrap";
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Logo from './Logo';
 
 import "../stylesComponents/Navbar.css";
 
@@ -14,7 +15,9 @@ function Navbar() {
   return (
     <CustomNavbar expand="lg" className="bg-color-navbar px-lg-5 px-md-3">
       <Container fluid>
-        <CustomNavbar.Brand href="#">comprasYa</CustomNavbar.Brand>
+        <CustomNavbar.Brand href="#">
+          <Logo />
+        </CustomNavbar.Brand>
         <CustomNavbar.Toggle aria-controls="navbarScroll" />
         <CustomNavbar.Collapse id="navbarScroll">
           <Nav

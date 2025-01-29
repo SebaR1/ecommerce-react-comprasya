@@ -11,5 +11,11 @@
 }
 
 main {
-  margin: auto;
+  margin: auto !important /* Siempre va a ser mas importante este */;
 }
+
+p, h5  {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+

@@ -8,6 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 import { Navbar as CustomNavbar } from "react-bootstrap";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from './Logo';
+import { Link } from "react-router-dom";
+
 
 import "../stylesComponents/Navbar.css";
 
@@ -16,7 +18,9 @@ function Navbar() {
     <CustomNavbar expand="lg" className="bg-color-navbar px-lg-5 px-md-3">
       <Container fluid>
         <CustomNavbar.Brand href="#">
-          <Logo />
+        <Nav.Link as={Link} to="/">
+          <Logo/>
+        </Nav.Link>
         </CustomNavbar.Brand>
         <CustomNavbar.Toggle aria-controls="navbarScroll" />
         <CustomNavbar.Collapse id="navbarScroll">
@@ -27,12 +31,13 @@ function Navbar() {
             style={{ maxHeight: '150px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Catalogo</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/catalogo">Ir al catálogo</Nav.Link>
             <NavDropdown title="Categorias">
-              <NavDropdown.Item href="#action3">Categoria 1</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Categoria 2</NavDropdown.Item>
-              <NavDropdown.Item href="#action5">Categoria 3</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogo/category/Remeras">Remeras</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogo/category/Buzos">Buzos</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogo/category/Camperas">Camperas</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/catalogo/category/Pantalones">Pantalones</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#action6" 
               className='d-flex align-items-center' style={{minHeight: '20px'}}>

@@ -9,6 +9,7 @@ function Home() {
         <h1 className='text-color-home'>ComprasYA</h1>
         <h3 className='text-color-home'>Este es un proyecto realizado por mi, Sebastian Romero</h3>
         <ButtonListContainer/>
+        
     </main>
   )
 }

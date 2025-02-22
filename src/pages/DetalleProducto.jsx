@@ -1,16 +1,17 @@
 import React from 'react'
-import ItemListContainer from '../components/ItemListContainer'
+import ItemDetailContainer from '../components/ItemDetailContainer';
 
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-function Catalogo() {
+
+function DetalleProducto() {
   return (
     <main>
-      <ItemListContainer greetings='Bienvenidos a ComprasYA'/>
+      <ItemDetailContainer/>
     </main>
   )
 }
 
-export default Catalogo
+export default DetalleProducto

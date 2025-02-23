@@ -32,7 +32,7 @@ function Navbar() {
             navbarScroll
           >
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/catalogo">Ir al catálogo</Nav.Link>
+            <Nav.Link as={Link} to="/catalogo">Catalogo</Nav.Link>
             <NavDropdown title="Categorias">
               <NavDropdown.Item as={Link} to="/catalogo/category/Remeras">Remeras</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/catalogo/category/Buzos">Buzos</NavDropdown.Item>

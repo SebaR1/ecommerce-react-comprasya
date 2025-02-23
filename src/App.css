@@ -19,3 +19,7 @@ p, h5  {
   padding: 0px !important;
 }
 
+main {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}

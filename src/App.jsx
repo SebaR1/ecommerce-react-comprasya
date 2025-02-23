@@ -20,7 +20,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/catalogo' element={<Catalogo/>}/>
         <Route path='/catalogo/category/:categoryId' element={<Catalogo/>}/>
-        <Route path='/catalogo/item/:id' element={<DetalleProducto/>}/>
+        <Route path='/catalogo/item/:itemId' element={<DetalleProducto/>}/>
         <Route path='*' element={<h1>404 NOT FOUND</h1>} /> 
       </Routes> 
     <Footer/>

@@ -1,12 +1,30 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { getProductsById } from '../asynProducts'
+import Item from './Item'
 
 function ItemDetailContainer() {
-  return (
-    <div 
-    className='d-flex justify-content-center align-items-center
-    mb-5 pb-5'>
-      <p>Porque no se muestra</p>
-    </div>
+  const [ product, setProduct] = useState(null)
+  
+  const { itemId } = useParams();
+
+  useEffect(() => { 
+  
+    getProductsById(itemId) 
+    .then((resp) => { 
+      setProduct(resp)   
+    })
+    .catch((err) => {
+      console.error(err); 
+    })
+  
+  }, [itemId]) 
+ 
+    return (  
+   <div className="d-flex justify-content-center">    
+      <Item  { ...product } />       
+    </div> 
   )
 }
 

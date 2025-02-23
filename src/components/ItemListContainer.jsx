@@ -4,7 +4,7 @@ import { ItemList } from "./ItemList";
 
 import { useParams } from "react-router-dom"; 
 
-const ItemListContainer = ({ greetings }) => { 
+const ItemListContainer = ({ title }) => { 
  
     const [ products, setProducts ] = useState([]);
         
@@ -24,9 +24,10 @@ const ItemListContainer = ({ greetings }) => {
         },[categoryId]) 
 
     return (   
-          <div>  
+          <>  
+            <h1 className="py-5 text-color-home text-center d-flex justify-content-center align-items-center">{ title }</h1>
               <ItemList  products={ products } /> 
-          </div>       
+          </>       
 
     ) 
 } 

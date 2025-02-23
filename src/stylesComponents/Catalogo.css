@@ -1,0 +1,13 @@
+.img-card-cat{
+    width: 250px !important;
+    height: 300px !important;
+    object-fit: cover;
+    padding: 10px !important;
+}
+
+.card-cat{
+    width: 300px !important;
+    height: 500px !important;
+    padding: 0px !important;
+    background-color: #866b7a !important;
+}    

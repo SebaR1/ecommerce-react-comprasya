@@ -1,0 +1,14 @@
+.detail-product {
+    width: 350px !important;
+    min-width: 350px !important; 
+    height: 600px !important;
+    padding: 0px !important;
+    background-color: #866b7a !important;
+}
+
+.img-detail-product {
+    width: 300px !important;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+}

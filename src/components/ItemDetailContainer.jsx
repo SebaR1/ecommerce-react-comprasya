@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProductsById } from '../asynProducts'
-import Item from './Item'
+import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {
   const [ product, setProduct] = useState(null)
@@ -23,7 +23,7 @@ function ItemDetailContainer() {
  
     return (  
    <div className="d-flex justify-content-center">    
-      <Item  { ...product } />       
+      <ItemDetail  { ...product } />       
     </div> 
   )
 }

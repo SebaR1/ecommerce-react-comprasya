@@ -25,8 +25,10 @@ const ItemListContainer = ({ title }) => {
 
     return (   
           <>  
-            <h1 className="py-5 text-color-home text-center d-flex justify-content-center align-items-center">{ title }</h1>
-              <ItemList  products={ products } /> 
+            <h1 className="py-5 text-color-home text-center d-flex justify-content-center align-items-center">
+              {categoryId ? `${title} - ${categoryId}` : title}
+            </h1>
+            <ItemList  products={ products } /> 
           </>       
 
     ) 

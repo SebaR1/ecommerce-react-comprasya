@@ -17,11 +17,9 @@ function Navbar() {
   return (
     <CustomNavbar expand="lg" className="bg-color-navbar px-lg-5 px-md-3">
       <Container fluid>
-        <CustomNavbar.Brand href="#">
         <Nav.Link as={Link} to="/">
           <Logo/>
         </Nav.Link>
-        </CustomNavbar.Brand>
         <CustomNavbar.Toggle aria-controls="navbarScroll" />
         <CustomNavbar.Collapse id="navbarScroll">
           <Nav
@@ -39,7 +37,7 @@ function Navbar() {
               <NavDropdown.Item as={Link} to="/catalogo/category/Camperas">Camperas</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/catalogo/category/Pantalones">Pantalones</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#action6" 
+            <Nav.Link as={Link} to="/carrito"
               className='d-flex align-items-center' style={{minHeight: '20px'}}>
               <CartWidget
               />

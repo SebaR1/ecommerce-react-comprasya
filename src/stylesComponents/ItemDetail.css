@@ -7,8 +7,8 @@
 }
 
 .img-detail-product {
-    width: 300px !important;
-    height: 300px;
+    width: 250px !important;
+    height: 250px !important;
     object-fit: cover;
     padding: 10px;
 }

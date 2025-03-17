@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom'
 function ButtonListContainer() {
   return (
         <div>
-            <Button className="text-color-home button-home px-5 py-3 fs-4" size="lg">
-                <Link className='text-color-home' to="/catalogo">Catalogo</Link>
-            </Button>
+            <Link className='text-color-home' to="/catalogo">
+                <Button className="text-color-home button-home px-5 py-3 fs-4" size="lg">
+                    Catalogo
+                </Button>
+            </Link>
         </div>
     )
 }

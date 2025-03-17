@@ -16,20 +16,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
 
-  const itemsCollectionRef = collection(db, 'Items');
-  const [itemsList, setItemsList] = useState([]);
-
-  const getItems = async () => {
-    const data = await getDocs(itemsCollectionRef);
-    const filteredData = data.docs.map(doc => ({...doc.data(), id: doc.id}));
-    console.log(filteredData);
-    setItemsList(filteredData);
-  }
-
-  useEffect(() => {
-    getItems();
-  }, [])
-
   return (
     <>
     <BrowserRouter>     

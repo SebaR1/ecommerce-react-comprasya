@@ -12,6 +12,7 @@ const Item = ({ id, img, name, price, stock, descrip, category }) => {
     setQuantity(quantity);
     const item = {id, name, price};
     addToCart(item, quantity);
+    setQuantity(1);
   }
 
   const increment = () => {
@@ -37,7 +38,7 @@ const Item = ({ id, img, name, price, stock, descrip, category }) => {
             <Card.Text> Categoria: {category} </Card.Text>
             <ButtonGroup className="d-flex align-items-center justify-content-center" aria-label="">
               <Button variant="secondary" onClick={() => decrement()}>-</Button>
-              <Button variant="secondary" onClick={() => handleAddToCart()} >Comprar {quantity}</Button>
+              <Button variant="secondary" onClick={() => handleAddToCart()} disabled={!stock || quantity === 0}>Comprar {quantity}</Button>
               <Button variant="secondary" onClick={() => increment()}>+</Button>
             </ButtonGroup>
         </Card.Body>

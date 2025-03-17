@@ -1,26 +1,47 @@
-import React from "react";
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Card, Container, Button } from 'react-bootstrap';
+import '../stylesComponents/CartList.css';
+import { useContext } from 'react';
+import { cartContext } from '../context/cartContext';
 
-const CartList = ({ cart }) => { 
+const CartList = () => { 
+    const { cart, removeItem, total } = useContext(cartContext);
+
     return ( 
-        <ListGroup>
-        {cart.map(item => 
-            <ListGroup.Item className='border-0 bg-transparent d-flex justify-content-center align-items-center' key={item.id}>
-                <div className='d-flex justify-content-between w-50 align-items-center'>
-                    <div className='w-50'>
-                        <span className='fw-bold'>{item.name}</span>
+        <Container className="cart-container">
+            <Card className="cart-card">
+                <Card.Body>
+                    <ListGroup variant="flush">
+                        {cart.map(item => (
+                            <ListGroup.Item className="cart-item" key={item.id}>
+                                <div className="cart-item-details">
+                                    <span className="cart-item-name">{item.name}</span>
+                                    <span className="cart-item-quantity">x{item.quantity}</span>
+                                    <span className="cart-item-price">Unidad: ${item.price}</span>
+                                    <span className="cart-item-subtotal">Subtotal: ${(item.quantity * item.price).toFixed(2)}</span>
+                                </div>
+                                <Button 
+                                    variant="danger" 
+                                    className="cart-item-remove"
+                                    onClick={() => removeItem(item.id)}
+                                >
+                                    Eliminar
+                                </Button>
+                            </ListGroup.Item>
+                        ))}
+                    </ListGroup>
+                    
+                    {/* Mostrar el total acumulado */}
+                    <div className="cart-total mt-4">
+                        <hr />
+                        <div className="d-flex justify-content-between">
+                            <span className="fw-bold">Total:</span>
+                            <span className="fw-bold">${total.toFixed(2)}</span>
+                        </div>
                     </div>
-                    <div className='w-25'>
-                        <hr className='m-0' style={{borderTop: '1px solid black'}} />
-                    </div>
-                    <div className='w-25 text-end'>
-                        <span className='text-muted'>${item.price}</span>
-                    </div>
-                </div>
-            </ListGroup.Item>)}
-        </ListGroup>
+                </Card.Body>
+            </Card>
+        </Container>
     ); 
 }
-
 
 export default CartList;
